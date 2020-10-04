@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-resources :noticias
+  get 'users/index'
+  get 'users/show'
+  get 'users/new'
+  get 'users/edit'
+  devise_for :users
+  resources :noticias
+  resources :users
   get "home/index"
   get "home/minor"
 
-  root to: 'home#index'
+  root to: 'noticias#index'
 
 end
