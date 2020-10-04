@@ -3,7 +3,7 @@ class NoticiasController < ApplicationController
 
 
     def index
-      @noticias=Noticia.all
+      @noticias = Noticia.order(created_at: :desc).paginate(page: params[:page], per_page: 6)
     end
 
 

@@ -3,6 +3,6 @@ resources :noticias
   get "home/index"
   get "home/minor"
 
-  root to: 'home#index'
+  root to: 'noticias#index'
 
 end
