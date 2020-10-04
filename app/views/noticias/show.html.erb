@@ -1,0 +1,44 @@
+<div class="wrapper wrapper-content  animated fadeInRight article">
+    <div class="row justify-content-md-center">
+        <div class="col-lg-10">
+            <div class="ibox">
+                <div class="ibox-content">
+                    
+                    <div class="text-center article-title">
+                        <span class="text-muted"><i class="far fa-clock"></i> <%= @noticia.fecha %></span>
+                        <h1 class="text-capitalize"> 
+                            <%= @noticia.titulo%>
+                        </h1>
+                    </div>
+                    <p>
+                       <%=@noticia.informacion%>
+                    </p>
+                   
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Tags:</h5>
+                            <button class="btn btn-primary btn-xs" type="button">Publicado</button>
+                            <%= link_to edit_noticia_path(@noticia), class:'btn btn-warning btn-xs' do %>
+                                <%= fa_icon "pencil-alt" %>
+                                Editar
+                            <% end %>
+
+                            <%= link_to noticia_path(@noticia.id),method: :delete,class: "btn btn-danger btn-xs", data: {confirm:"¿Desae eliminar este rol?"} do %>
+                                <%= fa_icon "trash" %>
+                                Eliminar
+                            <% end %>
+                        </div>
+                       
+                    </div>
+
+            
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
