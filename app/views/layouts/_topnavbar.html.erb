@@ -5,13 +5,12 @@
             <form role="search" class="navbar-form-custom" action="#">
             </form>
         </div>
-        <ul class="nav navbar-top-links navbar-right">
+           <ul class="nav navbar-top-links navbar-right">
             <li>
-                <a href="#">
-                    <i class="fa fa-sign-out-alt"></i>Cerrar sesión
-                </a>
+              <%= link_to destroy_user_session_path, method: :delete, class:"btn btn-nar" do %>
+                    <i class="fas fa-sign-out-alt"></i>Cerrar sesión
+                <%end%>
             </li>
         </ul>
-
     </nav>
 </div>
