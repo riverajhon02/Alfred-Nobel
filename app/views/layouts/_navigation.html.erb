@@ -7,7 +7,7 @@
                         <%= image_tag("profile_small.jpg",class: "rounded-circle m-b-md w-35 h-35", :alt => "rss feed") %>
                     </div>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <%= link_to  current_user.nombres + " " +  current_user.apellidos, user_path(current_user.id), class:'block m-t-xs font-bold text-capitalize' %>
+                       
                        
                     </a>
                 </div>
@@ -16,6 +16,7 @@
                 </div>
             </li>
             <li>
+            <li class="<%= 'active' if current_page?('/') %>">
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Noticias</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a><%= link_to "Últimas noticias", noticias_path %></a></li>

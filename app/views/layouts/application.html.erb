@@ -17,7 +17,8 @@
     <!-- Main javascript files -->
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  
+    <!-- Favicón -->
+    <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 
@@ -36,9 +37,10 @@
             <%= render 'layouts/topnavbar' %>
 
             <!-- Main view  -->
-         
-          
+            <%= custom_bootstrap_flash %>
             <%= yield %>
+
+            
 
         </div>
         <!-- End page wrapper-->
