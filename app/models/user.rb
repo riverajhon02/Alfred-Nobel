@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :anotaciones
+         belongs_to :curso, optional: true
 end

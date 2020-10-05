@@ -25,6 +25,15 @@
                     
                 </ul>
             </li>
+            <li class="<%= 'active' if current_page?('/') %>">
+                <a href="index.html"><i class="fas fa-landmark"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a><%= link_to "Crear Curso", new_curso_path %></a></li>
+
+                    <li><a><%= link_to "Listado Cursos", cursos_path%></a></li>
+                    
+                </ul>
+            </li>
             <li>
                 <a href="index.html"><i class="fas fa-users"></i><span class="nav-label">Usuarios</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">

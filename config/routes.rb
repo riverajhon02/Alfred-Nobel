@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
  
+  namespace :cursos do
+    get 'users/index'
+  end
   # Ruta por defecto
   root to: 'noticias#index'
  
@@ -7,9 +10,14 @@ Rails.application.routes.draw do
   resources :noticias
   resources :materias
 
+
   # Rutas anidadas
   resources :users do
     resources :anotaciones, module: :users
+  end
+
+  resources :cursos do
+    resources :users, module: :cursos
   end
 
   resources :materias do
