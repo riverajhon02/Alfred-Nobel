@@ -1,0 +1,94 @@
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-md-4">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Detalles del perfil</h5>
+                </div>
+                <div>
+                    <div class="ibox-content no-padding border-left-right">
+                        <!-- <img alt="image" class="img-fluid" src="img/profile_big.jpg"> -->
+                    </div>
+                    <div class="ibox-content profile-content">
+                        <h4><strong><%=@user.nombres%> <%=@user.apellidos%></strong></h4>
+                        <p><i class="fas fa-map-marker-alt"></i> <%=@user.direccion%></p>
+                        <p><i class="fas fa-phone-alt"></i> <%=@user.telefono%></p>
+                        <p><i class="fas fa-envelope"></i> <%=@user.email%></p>
+                        <h5>
+                            Observaciones
+                        </h5>
+
+                        <!-- <div class="user-button">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-default btn-sm btn-block"><i class="fa fa-coffee"></i> Buy a coffee</button>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>Observaciones </h5>
+                    <%= link_to new_user_anotacion_path(@user,@anotacion), class: "btn btn-primary" do %>
+                    <%= fa_icon "plus" %>
+                    <% end %>
+
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+
+
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+
+                    <% @anotaciones.each do |anotacion| %>
+
+                    <div class="feed-activity-list">
+
+                        <div class="feed-element">
+
+                            <div class="media-body ">
+                                <small class="float-right text-navy"> <%= anotacion.fecha %></small>
+                                <strong><%= anotacion.titulo%></strong><br> <br>
+                                <p><%=anotacion.contenido%></p>
+                                <div class="actions">
+                                    <%= link_to  edit_user_anotacion_path(@user, anotacion), class: "btn btn-xs btn-warning" do %>
+                                    <%= fa_icon "pencil-alt" %>
+                                    Editar
+                                    <% end %>
+
+                                    <%= link_to user_anotacion_path(@user, anotacion),method: :delete,class: "btn btn-danger btn-sm" do %>
+                                    <%= fa_icon "trash" %>
+                                    Eliminar
+                                    <% end %>
+                                   
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <%end%>
+                </div>
+
+            </div>
+        </div>
