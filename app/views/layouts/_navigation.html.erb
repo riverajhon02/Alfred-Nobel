@@ -42,6 +42,14 @@
                     
                 </ul>
             </li>
+            <li>
+                <a href="index.html"><i class="fas fa-key"></i><span class="nav-label">Roles</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a><%= link_to  "Nuevo Rol", new_role_path %></a></li>
+                     <li><a><%= link_to  "Listado Roles", roles_path %></a></li>
+                    
+                </ul>
+            </li>
             <li class="<%= 'active' if current_page?('/home/minor') %>">
                 <%= link_to "/home/minor" do %>
                 <i class="fa fa-desktop"></i> <span class="nav-label">Minor page</span>
