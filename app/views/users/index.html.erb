@@ -1,2 +1,47 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="mt-5">
+    <table id="myTable" class="display" style="width:100%">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th>Identificacion</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% @users.each do |user|  %>
+
+            <tr>
+                <td><%=user.identifiacion%></td>
+                <td><%=user.nombres%></td>
+                <td><%=user.apellidos%></td>
+                <td><%=user.direccion%></td>
+                <td><%=user.telefono%></td>
+                <td>
+                    <%= link_to user_path(user), class:"btn btn-success btn-sm" do %>
+                    <%= fa_icon "eye" %>
+                    
+                    <% end %>
+
+                    <%= link_to edit_user_path(user), class: "btn btn-warning btn-sm" do %>
+                    <i class="fas fa-pencil-alt"></i>
+                    
+                  <% end %>
+
+                  <%= link_to user_path(user),method: :delete,class: "btn btn-danger btn-sm", data: {confirm:"¿Desae eliminar este user?"} do %>
+                    <%= fa_icon "trash" %>
+                    
+                  <% end %>
+                </td>
+
+            </tr>
+
+            <%end%>
+
+        </tbody>
+
+    </table>
+</div>
