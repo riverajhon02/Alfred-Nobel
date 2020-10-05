@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     def update
       if @user.update(user_params)
-        redirect_to user_path
+        redirect_to users_path
         flash.notice="User editado"
       else
         render :edit
@@ -52,6 +52,6 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      params.require(:user).permit(:identificacion,:email,:password,:password_confirmation,:nombres,:apellidos,:direccion,:telefono)
+      params.require(:user).permit(:identifiacion,:email,:password,:password_confirmation,:nombres,:apellidos,:direccion,:telefono)
     end
 end

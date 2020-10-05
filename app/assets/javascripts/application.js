@@ -22,3 +22,6 @@
 //= require inspinia.js
 //= require toastr/toastr.min.js
 
+$(document).ready(function() {
+    $('#myTable').DataTable();
+});
