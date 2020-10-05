@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_230804) do
+ActiveRecord::Schema.define(version: 2020_10_05_145340) do
+
+  create_table "materias", force: :cascade do |t|
+    t.integer "codigo"
+    t.string "nombre"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "noticias", force: :cascade do |t|
     t.string "titulo"

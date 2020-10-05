@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-6 mt-4 mx-auto">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <div class="box">
+          <h2>Datos de la materia</h2>
+
+          <p>
+            <strong>Codigo:</strong>
+            <%= @materia.codigo %>
+
+          </p>
+
+          <p>
+            <strong>Nombre:</strong>
+            <%= @materia.nombre %>
+
+          </p>
+          <div class="row">
+            <div class="col"><%= link_to  "Atras", materias_path, class: "btn btn-success btn-block" %></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

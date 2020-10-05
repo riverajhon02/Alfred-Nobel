@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  get 'users/show'
-  get 'users/new'
-  get 'users/edit'
+  #get 'materias/index'
+  #get 'materias/show'
+  #get 'materias/new'
+  #get 'materias/edit'
+ 
   devise_for :users
   resources :noticias
+  resources :materias
   resources :users
   get "home/index"
   get "home/minor"

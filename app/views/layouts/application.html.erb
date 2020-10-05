@@ -53,19 +53,19 @@
 
         <% else %>
 
-
+            <%= custom_bootstrap_flash %>
             <%= yield %>
 
 
 
                 <%end%>
 
-
+                    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
                     <!-- Include javascript per-view -->
                     <!-- For demo purpose we include javascript in view but you can easily start SeedProject and organize it with Rails asset pipeline as you want -->
                     <%= yield :javascript %>
 
-                        <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+                        
 </body>
 
 </html>
