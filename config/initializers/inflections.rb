@@ -9,6 +9,7 @@
     inflect.irregular 'noticia', 'noticias'
     inflect.irregular "materia" , "materias"
     inflect.irregular "nota" , "notas"
+    inflect.irregular "anotacion" , "anotaciones"
   #   inflect.uncountable %w( fish sheep )
  end
 

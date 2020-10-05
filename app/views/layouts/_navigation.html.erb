@@ -6,8 +6,8 @@
                     <div class="d-flex justify-content-center">
                         <%= image_tag("profile_small.jpg",class: "rounded-circle m-b-md w-35 h-35", :alt => "rss feed") %>
                     </div>
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                       
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                       <p class="text-capitalize text-center block m-t-xs font-bold"> <%= link_to  current_user.nombres + " "+ current_user.apellidos, user_anotaciones_path(current_user.id, @anotaciones) %></p>
                        
                     </a>
                 </div>
@@ -29,6 +29,7 @@
                 <a href="index.html"><i class="fas fa-users"></i><span class="nav-label">Usuarios</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a><%= link_to  "Nuevo Usuario", new_user_path %></a></li>
+                     <li><a><%= link_to  "Listado Ususarios", users_path %></a></li>
                     
                 </ul>
             </li>

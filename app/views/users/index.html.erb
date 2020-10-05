@@ -8,6 +8,7 @@
                 <th>Apellidos</th>
                 <th>Direccion</th>
                 <th>Telefono</th>
+                <th>Email</th>
                 <th colspan="3">Acciones</th>
             </tr>
         </thead>
@@ -16,13 +17,14 @@
             <% @users.each do |user|  %>
 
             <tr>
-                <td><%=user.identifiacion%></td>
-                <td><%=user.nombres%></td>
-                <td><%=user.apellidos%></td>
-                <td><%=user.direccion%></td>
-                <td><%=user.telefono%></td>
-                <td>
-                    <%= link_to user_path(user), class:"btn btn-success btn-sm" do %>
+                <td class="text-capitalize"><%=user.identifiacion%></td>
+                <td class="text-capitalize"><%=user.nombres%></td>
+                <td class="text-capitalize"><%=user.apellidos%></td>
+                <td class="text-capitalize"><%=user.direccion%></td>
+                <td class="text-capitalize"><%=user.telefono%></td>
+                <td class="text-capitalize"><%=user.email%></td>
+                <td class="text-capitalize">
+                    <%= link_to user_anotaciones_path(user,@anotacion), class:"btn btn-success btn-sm" do %>
                     <%= fa_icon "eye" %>
                     
                     <% end %>

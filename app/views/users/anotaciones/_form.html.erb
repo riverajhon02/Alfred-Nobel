@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 mx-auto mt-5">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <div class="box">
+
+          <%= simple_form_for [@user, @anotacion] do |f| %>
+            <%= f.input :fecha %>
+            <%= f.input :titulo %>
+            <%= f.input :contenido %>
+            <%= f.button :submit, class:"btn btn-primary" %>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
