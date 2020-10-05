@@ -58,3 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gema de paginación
 gem 'will_paginate-bootstrap4'
+
+# Gema de excel
+gem 'caxlsx_rails', '~> 0.6.2'
