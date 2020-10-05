@@ -22,6 +22,9 @@
 
                       <%= f.input :email %>
 
+                      <h4>Añadir rol</h4>
+                        <%= f.association :roles , as: :check_boxes    %>
+
                       
 
                       <%= f.button :submit, class: "btn btn-primary" %>

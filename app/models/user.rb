@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable,
@@ -6,4 +7,6 @@ class User < ApplicationRecord
 
          has_many :anotaciones
          belongs_to :curso, optional: true
+
+         
 end
