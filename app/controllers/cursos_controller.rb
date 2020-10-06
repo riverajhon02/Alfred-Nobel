@@ -21,7 +21,7 @@ class CursosController < ApplicationController
 
   def create
     @curso = Curso.new(curso_params)
-    if @curso.save(validate: false)
+    if @curso.save
       redirect_to cursos_path
       flash[:success]= 'Curso creado'
     else
@@ -55,6 +55,6 @@ class CursosController < ApplicationController
   end
 
   def curso_params
-    params.require(:curso).permit(:codigo,:nombre,user_ids: [])
+    params.require(:curso).permit(:codigo,:nombre,user_ids: [], materia_ids: [])
   end
 end

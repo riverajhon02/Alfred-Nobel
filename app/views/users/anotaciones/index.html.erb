@@ -3,14 +3,15 @@
         <div class="col-md-4">
             <div class="ibox ">
                 <div class="ibox-title">
-                    <h5>Detalles del perfil</h5>
+                    <h5><span>Detalles del perfil</span></h5>
                 </div>
                 <div>
                     <div class="ibox-content no-padding border-left-right">
-                        <!-- <img alt="image" class="img-fluid" src="img/profile_big.jpg"> -->
+                        
+                         <%= image_tag @user.avatar.thumb.url,class: "img-fluid ml-4"%>
                     </div>
                     <div class="ibox-content profile-content">
-                        <h4><strong><%=@user.nombres%> <%=@user.apellidos%></strong></h4>
+                        <h4 class="text-capitalize"><strong><%=@user.nombres%> <%=@user.apellidos%></strong></h4>
                         <p><i class="fas fa-map-marker-alt"></i> <%=@user.direccion%></p>
                         <p><i class="fas fa-phone-alt"></i> <%=@user.telefono%></p>
                         <p><i class="fas fa-envelope"></i> <%=@user.email%></p>

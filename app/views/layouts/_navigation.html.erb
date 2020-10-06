@@ -4,7 +4,7 @@
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <div class="d-flex justify-content-center">
-                        <%= image_tag("profile_small.jpg",class: "rounded-circle m-b-md w-35 h-35", :alt => "rss feed") %>
+                      <%= image_tag current_user.avatar.thumb.url,class: "img-profile rounded-circle", :style=>"width:100px"%>
                     </div>
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                        <p class="text-capitalize text-center block m-t-xs font-bold"> <%= link_to  current_user.nombres + " "+ current_user.apellidos, user_anotaciones_path(current_user.id, @anotaciones) %></p>
@@ -16,7 +16,7 @@
                 </div>
             </li>
             <li>
-            <li class="<%= 'active' if current_page?('/') %>">
+            <li >
                 <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Noticias</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a><%= link_to "Últimas noticias", noticias_path %></a></li>
@@ -25,7 +25,7 @@
                     
                 </ul>
             </li>
-            <li class="<%= 'active' if current_page?('/') %>">
+            <li >
                 <a href="index.html"><i class="fas fa-landmark"></i> <span class="nav-label">Cursos</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
                     <li><a><%= link_to "Crear Curso", new_curso_path %></a></li>

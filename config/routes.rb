@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
  
- 
+
+  namespace :materias do
+    get 'users/index'
+  end
   namespace :cursos do
     get 'users/index'
   end
@@ -9,8 +12,8 @@ Rails.application.routes.draw do
  
   devise_for :users
   resources :noticias
-  resources :materias
   resources :roles
+  resources :materias
 
 
   # Rutas anidadas
@@ -23,8 +26,10 @@ Rails.application.routes.draw do
   end
 
   resources :materias do
-    resources :notas, module: :materias
+    resources :users, module: :materias
   end
+
+  
 
 
 

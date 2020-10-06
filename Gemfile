@@ -10,6 +10,8 @@ gem 'font_awesome5_rails'
 gem 'simple_form'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'rolify', '~> 5.3'
+gem 'carrierwave', '~> 2.1'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
