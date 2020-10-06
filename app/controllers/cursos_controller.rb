@@ -3,20 +3,18 @@ class CursosController < ApplicationController
   before_action :set_curso, only: [:show, :edit, :update, :destroy]
 
   def index
-    #authorize Curso
+    authorize Curso
     @cursos = Curso.all
 
   end
 
   def show
-
+    authorize @curso
   end
 
   def new
-
     @curso = Curso.new
-    #authorize @curso
-
+    authorize @curso
   end
 
   def create
@@ -30,7 +28,7 @@ class CursosController < ApplicationController
   end
 
   def edit
-
+    authorize @curso
   end
 
   def update
