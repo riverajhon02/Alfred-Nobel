@@ -1,19 +1,17 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-
     def index
-     
+      authorize User
       @users=User.all
     end
-
-
+  
     def show
     end
 
     def new
       @user= User.new
-     # authorize @user
+      # authorize @user
     end
 
     def create

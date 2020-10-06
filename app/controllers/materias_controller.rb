@@ -3,21 +3,17 @@ class MateriasController < ApplicationController
   before_action :set_materia, only: [:show, :edit, :update, :destroy]
 
   def index
-   
+    authorize Materia
     @materias = Materia.all
-
-
   end
 
   def show
-
+    authorize @materia
   end
 
   def new
-    
     @materia = Materia.new
-    
-
+    authorize @materia
   end
 
   def create
@@ -31,7 +27,7 @@ class MateriasController < ApplicationController
   end
 
   def edit
-
+    authorize @materia
   end
 
   def update

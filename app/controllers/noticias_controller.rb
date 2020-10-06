@@ -4,15 +4,18 @@ class NoticiasController < ApplicationController
 
 
     def index
+      authorize Noticia
       @noticias = Noticia.order(created_at: :desc).paginate(page: params[:page], per_page: 6)
     end
 
 
     def show
+      authorize @noticia
     end
 
     def new
       @noticia=Noticia.new
+      authorize @noticia
     end
 
     def create
@@ -42,6 +45,7 @@ class NoticiasController < ApplicationController
     end
 
     def edit
+      authorize @noticia
     end
 
     def set_noticia
