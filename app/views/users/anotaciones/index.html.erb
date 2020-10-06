@@ -66,7 +66,7 @@
                             <div class="media-body ">
                                 <small class="float-right text-navy"> <%= anotacion.fecha %></small>
                                 <strong><%= anotacion.titulo%></strong><br> <br>
-                                <p><%=anotacion.contenido%></p>
+                                <p><%= sanitize anotacion.contenido%></p>
                                 <div class="actions">
                                     <%= link_to  edit_user_anotacion_path(@user, anotacion), class: "btn btn-xs btn-warning" do %>
                                     <%= fa_icon "pencil-alt" %>

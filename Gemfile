@@ -12,6 +12,14 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'rolify', '~> 5.3'
 gem 'carrierwave', '~> 2.1'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
+# Gema de paginación
+gem 'will_paginate-bootstrap4'
+
+# Gema de excel
+gem 'caxlsx_rails', '~> 0.6.2'
+
+# Gema de texto enrquecido
+gem 'trix'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -59,8 +67,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Gema de paginación
-gem 'will_paginate-bootstrap4'
-
-# Gema de excel
-gem 'caxlsx_rails', '~> 0.6.2'

@@ -14,8 +14,9 @@
                         <%= c.input :fecha %>
                         <%= c.input :titulo %>
 
-                        <%= c.input :informacion %>
-                        <%= c.button :submit, class: "btn btn-primary" %>
+                        <%= c.hidden_field :informacion, id: "minfo" %>
+                        <trix-editor input="minfo"></trix-editor>
+                        <%= c.button :submit, class: "btn btn-primary mt-1" %>
                         <% end %>
                     </div>
                 </div>

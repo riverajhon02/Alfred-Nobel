@@ -8,9 +8,9 @@ class User < ApplicationRecord
          has_many :anotaciones
          belongs_to :curso, optional: true
 
-         mount_uploader :avatar, AvatarUploader
+         mount_uploader :avatar, AvatarUploader, optional: true
 
-         belongs_to :materia
+         belongs_to :materia, optional: true
 
          
 end

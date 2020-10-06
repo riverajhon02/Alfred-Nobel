@@ -21,6 +21,7 @@
 //= require metisMenu/jquery.metisMenu.js
 //= require inspinia.js
 //= require toastr/toastr.min.js
+//= require trix
 
 $(document).ready(function() {
     $('#myTable').DataTable();

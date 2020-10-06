@@ -7,8 +7,9 @@
           <%= simple_form_for [@user, @anotacion] do |f| %>
             <%= f.input :fecha %>
             <%= f.input :titulo %>
-            <%= f.input :contenido %>
-            <%= f.button :submit, class:"btn btn-primary" %>
+            <%= f.hidden_field :contenido, id: "mcontenido" %>
+            <trix-editor input="mcontenido"></trix-editor>
+            <%= f.button :submit, class:"btn btn-primary mt-2" %>
           <% end %>
 
         </div>
