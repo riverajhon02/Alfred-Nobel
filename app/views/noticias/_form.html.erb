@@ -13,7 +13,7 @@
                         <%= simple_form_for @noticia do |c| %>
                         <%= c.input :fecha %>
                         <%= c.input :titulo %>
-
+                        <%= c.label :información %>
                         <%= c.hidden_field :informacion, id: "minfo" %>
                         <trix-editor input="minfo"></trix-editor>
                         <%= c.button :submit, class: "btn btn-primary mt-1" %>
