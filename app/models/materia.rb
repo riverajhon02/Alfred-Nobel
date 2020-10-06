@@ -1,3 +1,3 @@
 class Materia < ApplicationRecord
-    has_many :notas, dependent: :destroy
+    has_many :users
 end

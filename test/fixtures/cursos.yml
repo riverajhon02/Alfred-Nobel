@@ -1,11 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  logro: MyString
-  nota: 9.99
-  materia: one
+  codigo: 1
+  nombre: MyString
 
 two:
-  logro: MyString
-  nota: 9.99
-  materia: two
+  codigo: 1
+  nombre: MyString
